@@ -11,40 +11,123 @@
     margin: 0;
     padding: 0;
 }
-
 body {
     font-family: 'Red Hat Display', sans-serif;
-
-}
-
-.card {
-    width: 400px;
-    height: 600px;
+    background-image: url(img/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
     background-color: var(--Pale-light);
+    font-size: 16px;
+}
+.card {
+    width: 330px;
+    height: 540px;
+    background-color: #fff;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-
     margin: auto;
     margin-top: 30px;
-
 }
 
+/* ---- IMAGEN CABECERA ---- */
+.card .card-header img {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    }
+
+/* ---- DESCRIPCION TARJETA ---- */
 .card .card-cont {
     margin: 30px 30px 0 30px;
 }
-
-.card .card-header img {
-width: 100%;
-border-radius: 20px 20px 0 0;
-
+.card-text {
+    color: var(--Dark-pale);
+    text-align: center;
+}
+.card-text h1 {
+    font-size: 20px;
+}
+.card-text p {
+    color: var(--Desaturated-pale);
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
+/* ---- DIV COSTOS ---- */
+.card-cost {
+    display: flex;
+    border-radius: 10px;
+    padding: 15px 10px 10px 10px;
+    align-items: center;
+    /* justify-content: space-between; */
+    background-color: var(--Very-pale-light);
+}
+.plan-text {
+    margin: 0 45px 0 20px;
+}
+.plan-text p {
+    font-size: 14px;
+}
+.card-cost .plan-text p:nth-child(1) {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+.card-cost .plan-text p:nth-child(2) {
+    color: var(--Desaturated-pale);
+}
+.card-cost .plan-link a {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--Bright-pale);
+}
+.card-cost .plan-link a:hover {
+    text-decoration: none;
+    color: hsla(245, 72%, 53%, 0.603);
+    transition: .2s;
+}
 
+/* ---- BOTONES ---- */
+.buttons-footer {
+    text-align: center;
+}
+.buttons-footer a{
+    text-decoration: none;
+}
+.button-payment {
+    background: var(--Bright-pale);
+    width: 90%;
+    height: 50px;
+    margin: 20px auto 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 6px 6px 14px hsla(246, 100%, 50%, 0.404) ;
+    font-size: 14px;
+}
+.button-payment:hover {
+    background: hsla(245, 72%, 53%, 0.603); 
+    box-shadow: 6px 6px 14px hsla(261, 100%, 50%, 0.404) ;
+    transition: .3s;
+}
+.button-payment a {
+    color: var(--Very-pale-light);
+    font-weight: bold;
+}
+.button-cancel a{
+    color: var(--Desaturated-pale);
+    font-size: 16px;
+    font-weight: bold;
+}
+.button-cancel a:hover {
+    color: var(--Dark-pale);
+    transition: .2s;
+}
 
-
-
-
-@media screen {
-    
+/* ---- FONDO PARA MOBILE ---- */
+@media (max-width: 600px) {
+    body {
+        background-image: url(img/pattern-background-mobile.svg);
+        background-repeat: no-repeat;
+    }
 }
